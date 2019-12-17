@@ -1,0 +1,30 @@
+
+[1mFrom:[0m /Users/mm-mac/test/launch-school/101/101-109-small-problems/medium2/nine2_bubble_sort.rb @ line 110 Object#bubble_sort!:
+
+     [1;34m89[0m: [32mdef[0m [1;34mbubble_sort![0m(arr)
+     [1;34m90[0m:   [32mif[0m arr == arr.sort
+     [1;34m91[0m:     [32mreturn[0m arr
+     [1;34m92[0m:   [32mend[0m
+     [1;34m93[0m: 
+     [1;34m94[0m:   swapped = [1;36mfalse[0m
+     [1;34m95[0m:   loop [32mdo[0m
+     [1;34m96[0m:     arr.each_with_index [32mdo[0m |num, idx|
+     [1;34m97[0m:       puts [31m[1;31m"[0m[31mnum: #{num}[0m[31m; arr[idx + 1]: #{arr[idx + 1]}[0m[31m[1;31m"[0m[31m[0m
+     [1;34m98[0m:       [32mif[0m num > arr[idx + [1;34m1[0m]
+     [1;34m99[0m: 
+    [1;34m100[0m:       [1;34m#  binding.pry[0m
+    [1;34m101[0m:       [1;34m# if arr[counter] > arr[counter + 1][0m
+    [1;34m102[0m:         arr[idx + [1;34m1[0m], num = num, arr[idx [1;34m+1[0m]
+    [1;34m103[0m:         puts [31m[1;31m"[0m[31mnum: #{num}[0m[31m; arr[idx + 1]: #{arr[idx + 1]}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m104[0m: 
+    [1;34m105[0m:         swapped = [1;36mtrue[0m
+    [1;34m106[0m:           binding.pry
+    [1;34m107[0m:       [32mend[0m
+    [1;34m108[0m:       [1;34m# counter += 1[0m
+    [1;34m109[0m:     [1;34m#  binding.pry[0m
+ => [1;34m110[0m:     [32mend[0m
+    [1;34m111[0m:     [32mbreak[0m [32mif[0m swapped == [1;36mfalse[0m
+    [1;34m112[0m:   [32mend[0m
+    [1;34m113[0m:   arr
+    [1;34m114[0m: [32mend[0m
+
