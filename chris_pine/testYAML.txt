@@ -1,0 +1,8 @@
+---
+- 42
+- '42'
+- - this is tedious
+  - and confusing
+  - i wonder how
+  - you instruct it
+  - to keep the file open
