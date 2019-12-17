@@ -1,0 +1,66 @@
+require 'minitest/autorun'
+require 'minitest/pride'
+require_relative 'scrabble_score'
+
+class ScrabbleTest < Minitest::Test
+  def test_empty_word_scores_zero
+    assert_equal 0, Scrabble.new('').score
+  end
+
+  def test_whitespace_scores_zero
+    # skip
+    assert_equal 0, Scrabble.new(" \t\n").score
+  end
+
+  def test_nil_scores_zero
+    # skip
+    assert_equal 0, Scrabble.new(nil).score
+  end
+
+  def test_scores_very_short_word
+    # skip
+    assert_equal 1, Scrabble.new('a').score
+  end
+
+  def test_scores_other_very_short_word
+    # skip
+    assert_equal 4, Scrabble.new('f').score
+  end
+
+  def test_simple_word_scores_the_number_of_letters
+    # skip
+    assert_equal 6, Scrabble.new('street').score
+  end
+
+  def test_complicated_word_scores_more
+    # skip
+    assert_equal 22, Scrabble.new('quirky').score
+  end
+
+  def test_scores_are_case_insensitive
+    # skip
+    assert_equal 41, Scrabble.new('OXYPHENBUTAZONE').score
+  end
+
+  def test_convenient_scoring
+    # skip
+    assert_equal 13, Scrabble.score('alacrity')
+  end
+
+# my tests for non-string input
+  def test_input_array
+    assert_equal 0, Scrabble.score([5, 6])
+  end
+
+  def test_input_hash_with_string
+    assert_equal 7, Scrabble.score({[5, 6] => 'string'})
+  end
+
+  def test_input_hash_without_string
+    assert_equal 0, Scrabble.score({[5, 6] => [4, 2]})
+  end
+
+  def test_input_integer
+    assert_equal 0, Scrabble.score(8)
+  end
+end
